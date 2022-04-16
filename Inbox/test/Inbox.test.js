@@ -89,9 +89,9 @@ describe('Inbox',()=>{
 })
 
 it("It can change a message",async()=>{
-    await inbox.methods.setMessage("Bye").send({from:accounts[0]})
+    await inbox.methods.setMessage("Bye !").send({from:accounts[0]})
     const message=await inbox.methods.message().call();
-    assert.equal(message,"Bye")
+    assert.equal(message,"Bye !")
    })
     
 });
